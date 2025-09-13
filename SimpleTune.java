@@ -16,6 +16,8 @@ public class SimpleTune
     // The notes of the tune, in sequence.
     private final ArrayList<Note> notes;
     
+    private MidiPlayer player;
+
     /**
      * Support the creation of a simple tune.
      */
@@ -87,5 +89,12 @@ public class SimpleTune
     {
         return notes;
     }
+    public void CreateAndPlay() {
+    SimpleTune tune = new SimpleTune();
+    tune.setInstrument(0);
+    tune.addNote("C4", 500);
+    tune.addNote("D4", 500);
+    player.playTune(tune);
+}
 
 }
